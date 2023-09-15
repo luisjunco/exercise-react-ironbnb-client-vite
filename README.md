@@ -68,7 +68,7 @@ Setup routing. You will need this behaviour:
 - If user visits `/`, display the `<HomePage />` component
 - If user visits `/apartments`, display `<ApartmentsList />`
 - If user visits `/apartments/42`, display `<ApartmentDetails />` (note, that `42` must be dynamic -- use URL params)
-- If user visits `/apartments/create`, display `<CreateApartment />` (note: in the code, you may need this route earlie... otherwise "create" will be treated as an apartment id)
+- If user visits `/create`, display `<CreateApartment />` (note: in the code, you may need this route earlie... otherwise "create" will be treated as an apartment id)
 
 <br />
 
