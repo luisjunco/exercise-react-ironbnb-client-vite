@@ -25,6 +25,8 @@ function ApartmentsList() {
                         <h3>{element.title}</h3>
                         <img src={element.img} alt={element.title} />
                         <p>Price: {element.pricePerDay}</p>
+
+                        <Link to={`/apartments/${element._id}`}>More details</Link>
                     </div>
                 )
             })}
