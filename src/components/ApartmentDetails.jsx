@@ -30,7 +30,7 @@ function ApartmentDetails() {
     }
 
     return (
-        <section className="ApartmentDetails">
+        <main className="ApartmentDetails">
             <h1>ApartmentDetails</h1>
 
             {details === null
@@ -42,7 +42,7 @@ function ApartmentDetails() {
                 <Link to="/apartments">Back</Link>
             </p>
 
-        </section>
+        </main>
     );
 }
 

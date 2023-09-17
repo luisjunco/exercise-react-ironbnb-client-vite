@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import "./ApartmentsList.css"
+
 function ApartmentsList() {
 
     const [apartments, setApartments] = useState(null);
@@ -16,9 +18,11 @@ function ApartmentsList() {
             })
     }, []);
 
+    
     return (
-        <>
-            <h1>List of Apartments:</h1>
+        <main className="ApartmentsList">
+            <h1>List of apartments:</h1>
+
             {apartments && apartments.map((element) => {
                 return (
                     <div key={element._id} className="apartment-summary">
@@ -30,7 +34,7 @@ function ApartmentsList() {
                     </div>
                 )
             })}
-        </>
+        </main>
     )
 }
 
