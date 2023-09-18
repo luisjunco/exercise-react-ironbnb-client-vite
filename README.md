@@ -96,10 +96,48 @@ For now, don't worry about the button "more details" (we will implement this fun
 ## Iteration 3: Create new Apartment
 
 Implement the logic for `<CreateApartment />`.
-- You will need a form (controlled component).
-- When user submits, we need to send a POST request to the API.
+
+Steps to follow:
+- In `CreateApartment`, create a form with 3 input fields (title, image, price).
+- Make sure the form is a controlled component (ie. save the form info in the state of React). You can follow this [cheatsheet](https://gist.github.com/luisjunco/6c59bc3ea6a1d0b3a975d15ff2115fec).
+- When the user submits, send a POST request to the API. In the post request, you need to send an object with the data.
+  - ex. `axios.post(url, data)`
 - Once we get the response from the API, we can redirect the user to the list of apartments
-  - do some research on how to redirect with react-router (hint: the library provides a custom hook `useNavigate()`)
+  - In react-router, you can use the custom hook `useNavigate()` (more details [here](https://gist.github.com/luisjunco/cbd1fe157c7f2f2b6b4983adbea9ae1e#redirect-programmatically-with-the-hook-usenavigate))
+
+
+<details>
+  <summary>Hints</summary>
+  <br>
+
+  In the post request, make sure to send the data in the same format that the API is expecting.
+
+  Ex:
+  
+  ```js
+
+  const newApartment = {
+    img: xxxx,
+    title: xxxx,
+    pricePerDay: xxxx
+  }
+
+  axios.post(url, newApartment)
+  .then()
+  .catch()
+  ```
+
+</details>
+
+
+<details>
+  <summary>Solution</summary>
+  <br>
+
+  Video: how to implement functionality to create new apartment: 
+  - [https://www.loom.com/share/React-IronBnb-functionality-to-create-new-apartment-e30c3df10a3b4d7a9e46d0ec3b6e8d00?sid=a6787198-65a9-4f62-8784-6430efacab6b](https://www.loom.com/share/React-IronBnb-functionality-to-create-new-apartment-e30c3df10a3b4d7a9e46d0ec3b6e8d00?sid=a6787198-65a9-4f62-8784-6430efacab6b)
+
+</details>
 
 
 
